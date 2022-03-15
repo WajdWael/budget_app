@@ -1,0 +1,335 @@
+/* === GOOGLE FONTS === */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+:root {
+  /* == COLORS == */
+  --mainWhite: #f5f5f5f5;
+  --mainDark: #333333;
+  --mainGreen: #317b22;
+  --mainRed: #b80c09;
+  --mainBlue: #05668d;
+  /* == FONT HIGHT == */
+  --font-lighter: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-bold: 700;
+  /* == Font and typography == */
+  --family: "Roboto", sans-serif;
+  --biggest-font-size: 1.75rem;
+  --normal-font-size: 0.938rem;
+  --heading-font-size: 1.25rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+  --tiny-font-size: 0.625rem;
+  /* == Margenes Bottom == */
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-1: 1rem;
+  --mb-1-25: 1.25rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --biggest-font-size: 2.125rem;
+    --heading-font-size: 1.5rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+    --tiny-font-size: 0.688rem;
+  }
+}
+/* ==== BASIC ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--family);
+  background: #eff2f2;
+  min-height: 100vh;
+}
+.d-flex {
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+}
+/* == Header styles == */
+header {
+  background: var(--mainBlue);
+  padding: var(--mb-2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+header h1 {
+  color: var(--mainWhite);
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/* == GRID SYSTEM == */
+
+#outter-container {
+  justify-content: center;
+  padding: 4.5rem 5rem;
+  margin-top: 20px;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 38% 55%;
+  column-gap: 70px;
+  row-gap: 50px;
+}
+
+/*_________________BUDGET FORM_____________________*/
+
+#budget-container {
+  border: 1px solid green;
+  padding: 2rem;
+  font-size: var(--small-font-size);
+  border-radius: 12px;
+  margin-top: 3rem;
+  background: #f6f6f6;
+  box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+}
+
+#budget-container label {
+  text-align: center;
+  display: block;
+  color: var(--mainGreen);
+  font-size: 1.42rem;
+}
+
+#budget-container input {
+  width: 95%;
+  display: block;
+  margin: 25px 0;
+  padding: 0.25rem;
+  font-size: 1.4rem;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid green;
+  outline: green;
+}
+
+#budget-container input:focus {
+  box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.4); /* blurr effect */
+}
+
+#budget-container button {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--mainGreen);
+  border-radius: 8px;
+  color: #fff;
+  background: var(--mainGreen);
+  outline: none;
+  font-size: var(--normal-font-size);
+  transition: all 0.2s ease-in-out;
+}
+
+#budget-container button:hover {
+  background: transparent;
+  color: var(--mainGreen);
+  cursor: pointer;
+}
+
+#budget-container button:active {
+  background: darkgreen;
+}
+
+/*______________________________EXPENSE FORM__________________________ */
+
+#expenseEntry-container {
+  border: 1px solid var(--mainRed);
+  padding: 0.85rem;
+  border-radius: 12px;
+  background: #f6f6f6;
+  box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+  order: 3;
+}
+
+#expenseEntry-container label {
+  text-align: center;
+  display: block;
+  margin-bottom: var(--mb-1-5);
+  color: var(--mainRed);
+  font-size: var(--heading-font-size);
+}
+
+#expenseEntry-container .f {
+  padding: 1.85rem;
+}
+
+#expenseEntry-container input {
+  width: 95%;
+  display: block;
+  margin: 10px 0;
+  padding: 0.25rem;
+  text-align: center;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  border: 1px solid rgb(150, 0, 0);
+  outline: rgb(150, 0, 0);
+}
+
+#expenseEntry-container input:focus {
+  box-shadow: 0 0 5px 0px black; /* blurr effect */
+}
+
+#expenseEntry-container button {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  background: var(--mainRed);
+  border: 1px solid var(--mainRed);
+  color: #fff;
+  margin: 5px 2rem 0.85rem 0;
+  border-radius: 7px;
+  font-size: var(--small-font-size);
+  outline: none;
+}
+
+#expenseEntry-container button:hover {
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--mainRed);
+  transition: all 0.2s ease-in-out;
+}
+
+#expenseEntry-container button:active {
+  background-color: rgb(97, 0, 0);
+}
+
+/* __________________________BALANCE DISPLAY SECTION__________________________ */
+
+#balanceDisplay-container {
+  display: flex;
+  justify-content: space-between;
+  order: 2;
+}
+
+#balanceDisplay-container > * {
+  padding: 0.25rem;
+}
+
+#balanceDisplay-container i {
+  font-size: 3.25rem;
+  color: var(--mainBlue);
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin: 20px 0;
+}
+
+#balanceDisplay-container h2 {
+  text-transform: uppercase;
+  text-align: center;
+  color: rgb(77, 77, 77);
+  margin: 0;
+}
+
+#balanceDisplay-container .moneyOutput {
+  font-size: 2.25rem;
+  text-align: center;
+  margin: 0;
+}
+
+.text-red {
+  color: rgb(180, 0, 0);
+}
+.text-green {
+  color: green;
+}
+
+/*______________________EXPENSES DISPLAY _______________________________*/
+#expenses-container {
+  /* border: 1px solid black; */
+  order: 4;
+  width: 100%;
+  height: 230px;
+  overflow-y: scroll;
+}
+#table-list {
+  width: 100%;
+  padding: 0;
+}
+
+#expenses-container h2 {
+  font-size: 1.1rem;
+}
+
+#table-list th {
+  text-align: left;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  border-bottom: 1px solid rgb(119, 119, 119);
+}
+
+#table-list td {
+  padding: 0.5rem;
+  color: rgb(180, 0, 0);
+  font-size: 1.4rem;
+  border-bottom: 1px solid lightgray;
+}
+
+.icons {
+  text-align: right;
+}
+#table-list i {
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+  padding: 0 0.2rem;
+  cursor: pointer;
+}
+
+#table-list i:hover {
+  color: black;
+}
+
+.editBtn {
+  color: rgb(0, 53, 122);
+}
+
+.removeBtn {
+  color: rgb(180, 0, 0);
+}
+
+/* ERROR MESSAGES */
+.error-active {
+  margin-top: 10px;
+  padding: 1rem;
+  font-size: 1.1rem;
+  background: rgb(255, 95, 95);
+  color: white;
+}
+
+/* ____________________________MEDIA QUERY FOR RESPONSIVE DESIGN____________________________ */
+@media screen and (max-width: 1100px) {
+  #outter-container {
+    column-gap: 20px;
+  }
+}
+@media screen and (max-width: 760px) {
+  #outter-container {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+  #budget-container {
+    order: 1;
+  }
+  #expenseEntry-container {
+    order: 2;
+  }
+  #balanceDisplay-container {
+    order: 3;
+  }
+  #expenses-container {
+    order: 4;
+  }
+}

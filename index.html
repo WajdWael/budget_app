@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- == Meta tag == -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+        <!-- == Title == -->
+        <title>Budge App Project</title>
+
+        <!-- fontawsome icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+        <!-- == CSS file == -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <header>
+            <h1 id="title">Budget App</h1>
+        </header>
+
+        <div id="outter-container">
+        <!-- COLUMN 1 -->
+        <div id="budget-container">
+            <form>
+            <label>Enter Your Budget</label>
+            <input type="number" id="budgetInput" />
+            <div class="d-flex">
+                <button type="button" id="calcBtn">Add Budget</button>
+            </div>
+            <div id="budget-error-message"></div>
+            </form>
+        </div>
+
+        <!-- COLUMN 3 -->
+        <div id="expenseEntry-container">
+            <form>
+            <div class="f">
+                <label>Enter Your Expense</label>
+                <input type="text " id="expenseInput" />
+            </div>
+            <div class="f">
+                <label>Enter Your Expense Amount</label>
+                <input type="number" id="expenseAmountInput" />
+            </div>
+            <div class="d-flex">
+                <button type="button" id="expenseBtn">Add Expense</button>
+            </div>
+            <div id="expense-error-message"></div>
+            </form>
+        </div>
+
+        <!-- COLUMN 2 -->
+        <div id="balanceDisplay-container">
+            <div id="budgetTotalAmount">
+            <h2>Budget</h2>
+            <i class="fa fa-money" aria-hidden="true"></i>
+            <h3 id="budgetMoney" class="moneyOutput text-green">$0</h3>
+            </div>
+
+            <div id="expensesTotalAmount">
+            <h2>Expenses</h2>
+            <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+            <h3 id="expensesMoney" class="moneyOutput text-red">$0</h3>
+            </div>
+
+            <div id="balanceTotalAmount">
+            <h2>Balance</h2>
+            <i class="fa fa-dollar" aria-hidden="true"></i>
+            <h3 id="balanceMoney" class="moneyOutput text-green">$0</h3>
+            </div>
+        </div>
+
+        <!-- COLUMN 4 -->
+        <div id="expenses-container">
+            <table id="table-list">
+            <tr>
+                <th>Expense Title</th>
+                <th>Expense Value</th>
+                <th></th>
+            </tr>
+            </table>
+        </div>
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+</html>
